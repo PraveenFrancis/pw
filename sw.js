@@ -8,5 +8,5 @@ self.addEventListener("push", function (event) {
   };
   self.registration.showNotification(data.title, options);
   //    const options = {}
-  e.waitUntil(self.registration.showNotification("Hello workd!", options));
+  event.waitUntil(self.registration.showNotification("Hello workd!", options));
 });
