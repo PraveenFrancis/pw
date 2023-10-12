@@ -5,7 +5,7 @@ let vapidkeys = {
     privateKey: 'mwxDPEVsQmz0CrI5MQig80JZaM7xhbVkysBiOLNNitI'
   }
 
-push.setVapidDetails('mailto:238773@ust-global.com', vapidkeys.privateKey, vapidkeys.privateKey)
+push.setVapidDetails('mailto:238773@ust-global.com', vapidkeys.publicKey, vapidkeys.privateKey)
 
 let sub = {};
 push.sendNotification(sub, 'test message')
