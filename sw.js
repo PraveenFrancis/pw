@@ -1,5 +1,5 @@
 self.addEventListener("push", function (event) {
-    console.log(event)
+    console.log(event, 'event')
 //   let data = event.data.json();
   const image =
     "https://cdn.glitch.com/614286c9-b4fc-4303-a6a9-a4cef0601b74%2Flogo.png?v=1605150951230";
@@ -7,7 +7,7 @@ self.addEventListener("push", function (event) {
     body: 'data.options.body',
     icon: image,
   };
-//   self.registration.showNotification(data.title, options);
+  const promiseChain = self.registration.showNotification('Hello workd!');
   //    const options = {}
-  event.waitUntil(self.registration.showNotification("Hello workd!", options));
+  event.waitUntil(promiseChain);
 });
